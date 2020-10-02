@@ -455,8 +455,32 @@ node_types:
       nfs_role:
         file: indigo-dc.nfs,master
         type: tosca.artifacts.AnsibleGalaxy.role
-      galaxy_role:
+      laniakea-galaxy:
         file: laniakea.galaxy
+        type: tosca.artifacts.AnsibleGalaxy.role
+      galaxy-role:
+        file: galaxyproject.galaxy,0.9.6
+        type: tosca.artifacts.AnsibleGalaxy.role
+      nginx-role:
+        file: galaxyproject.nginx,0.6.4
+        type: tosca.artifacts.AnsibleGalaxy.role
+      pgsql-role:
+        file: galaxyproject.postgresql,1.0.2
+        type: tosca.artifacts.AnsibleGalaxy.role
+      pgsql-objects-role:
+        file: natefoo.postgresql_objects,1.1
+        type: tosca.artifacts.AnsibleGalaxy.role
+      pip-role:
+        file: geerlingguy.pip,1.3.0
+        type: tosca.artifacts.AnsibleGalaxy.role
+      miniconda-role:
+        file: uchida.miniconda,0.3.0
+        type: tosca.artifacts.AnsibleGalaxy.role
+      systemd-role:
+        file: usegalaxy_eu.galaxy_systemd,0.1.2
+        type: tosca.artifacts.AnsibleGalaxy.role
+      certbot-role:
+        file: usegalaxy_eu.certbot,0.1.3
         type: tosca.artifacts.AnsibleGalaxy.role
     interfaces:
       Standard:
