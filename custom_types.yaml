@@ -485,7 +485,7 @@ node_types:
     interfaces:
       Standard:
         configure:
-          implementation: https://raw.githubusercontent.com/indigo-dc/tosca-types/v4.0.0/artifacts/galaxy/galaxy_install.yml
+          implementation: https://raw.githubusercontent.com/mtangaro/tosca-types/laniakea-galaxy/artifacts/galaxy/galaxy_install.yml
           inputs:
             galaxy_install_path: { get_property: [ SELF, install_path ] }
             galaxy_user: { get_property: [ SELF, user ] }
