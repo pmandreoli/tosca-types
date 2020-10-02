@@ -432,20 +432,6 @@ node_types:
         type: string
         description: galaxy instance description
         default: "INDIGO Galaxy test"
-      instance_key_pub:
-        type: string
-        description: galaxy instance ssh public key
-        default: your_ssh_public_key
-      flavor:
-        type: string
-        description: name of the Galaxy flavor
-        required: false
-        default: galaxy-no-tools
-      reference_data:
-        type: boolean
-        description: Install Reference data
-        default: true
-        required: false
     requirements:
       - lrms:
           capability: tosca.capabilities.indigo.LRMS
@@ -455,32 +441,29 @@ node_types:
       nfs_role:
         file: indigo-dc.nfs,master
         type: tosca.artifacts.AnsibleGalaxy.role
-      laniakea-galaxy:
+      laniakea_galaxy_role:
         file: laniakea.galaxy
         type: tosca.artifacts.AnsibleGalaxy.role
-      galaxy-role:
+      galaxy_role:
         file: galaxyproject.galaxy,0.9.6
         type: tosca.artifacts.AnsibleGalaxy.role
-      nginx-role:
+      nginx_role:
         file: galaxyproject.nginx,0.6.4
         type: tosca.artifacts.AnsibleGalaxy.role
-      pgsql-role:
+      pgsql_role:
         file: galaxyproject.postgresql,1.0.2
         type: tosca.artifacts.AnsibleGalaxy.role
-      pgsql-objects-role:
+      pgsql_objects_role:
         file: natefoo.postgresql_objects,1.1
         type: tosca.artifacts.AnsibleGalaxy.role
-      pip-role:
+      pip_role:
         file: geerlingguy.pip,1.3.0
         type: tosca.artifacts.AnsibleGalaxy.role
-      miniconda-role:
+      miniconda_role:
         file: uchida.miniconda,0.3.0
         type: tosca.artifacts.AnsibleGalaxy.role
-      systemd-role:
+      systemd_role:
         file: usegalaxy_eu.galaxy_systemd,0.1.2
-        type: tosca.artifacts.AnsibleGalaxy.role
-      certbot-role:
-        file: usegalaxy_eu.certbot,0.1.3
         type: tosca.artifacts.AnsibleGalaxy.role
     interfaces:
       Standard:
@@ -494,10 +477,7 @@ node_types:
             galaxy_lrms: { get_property: [ SELF, lrms, type ] }
             galaxy_version: { get_property: [ SELF, version ] }
             galaxy_instance_description: { get_property: [ SELF, instance_description ] }
-            galaxy_instance_key_pub:  { get_property: [ SELF, instance_key_pub ] }
             export_dir: { get_property: [ SELF, export_dir ] }
-            galaxy_flavor: { get_property: [ SELF, flavor ] }
-            get_refdata: { get_property: [ SELF, reference_data ] }
 
   tosca.nodes.indigo.GalaxyPortalAndStorage:
     derived_from: tosca.nodes.indigo.GalaxyPortal
