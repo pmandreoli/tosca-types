@@ -385,7 +385,7 @@ node_types:
         file: indigo-dc.zabbix-agent,master
         type: tosca.artifacts.AnsibleGalaxy.role
       os_users_role:
-        file: indigo-dc.os_users
+        file: indigo-dc.os_users,devel
         type: tosca.artifacts.AnsibleGalaxy.role
     interfaces:
       Standard:
