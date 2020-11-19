@@ -452,7 +452,7 @@ node_types:
         file: indigo-dc.nfs,master
         type: tosca.artifacts.AnsibleGalaxy.role
       laniakea_galaxy_role:
-        file: laniakea.galaxy
+        file: laniakea.galaxy,dev
         type: tosca.artifacts.AnsibleGalaxy.role
       galaxy_role:
         file: galaxyproject.galaxy,0.9.6
@@ -473,7 +473,7 @@ node_types:
         file: uchida.miniconda,0.3.0
         type: tosca.artifacts.AnsibleGalaxy.role
       systemd_role:
-        file: usegalaxy_eu.galaxy_systemd,0.1.2
+        file: usegalaxy_eu.galaxy_systemd
         type: tosca.artifacts.AnsibleGalaxy.role
       proftpd_role:
         file: galaxyproject.proftpd,0.3.0
