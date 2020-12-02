@@ -470,7 +470,7 @@ node_types:
         file: geerlingguy.pip,1.3.0
         type: tosca.artifacts.AnsibleGalaxy.role
       miniconda_role:
-        file: uchida.miniconda,0.3.0
+        file: uchida.miniconda,master
         type: tosca.artifacts.AnsibleGalaxy.role
       systemd_role:
         file: usegalaxy_eu.galaxy_systemd
