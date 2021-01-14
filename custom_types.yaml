@@ -452,7 +452,7 @@ node_types:
         file: indigo-dc.nfs,master
         type: tosca.artifacts.AnsibleGalaxy.role
       laniakea_galaxy_role:
-        file: laniakea.galaxy,dev
+        file: laniakea.galaxy,add-tools
         type: tosca.artifacts.AnsibleGalaxy.role
       galaxy_role:
         file: galaxyproject.galaxy,0.9.6
