@@ -767,7 +767,7 @@ node_types:
     interfaces:
       Standard:
         configure:
-          implementation: https://raw.githubusercontent.com/indigo-dc/tosca-types/v3.0.1/artifacts/galaxy/galaxy_docker.yml
+          implementation: https://raw.githubusercontent.com/pmandreoli/tosca-types/v3.0.1/artifacts/galaxy/galaxy_docker.yml
           inputs:
             storage_encryption: { get_property: [ SELF, storage_encryption ] }
             vault_url: { get_property: [ SELF, vault_url ] }
