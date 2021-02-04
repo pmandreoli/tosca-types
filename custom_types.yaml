@@ -762,7 +762,7 @@ node_types:
         file: indigo-dc.docker
         type: tosca.artifacts.AnsibleGalaxy.role
       galaxy_role_docker:
-        file: indigo-dc.galaxycloud_docker
+        file: pmandreoli.galaxycloud_docker
         type: tosca.artifacts.AnsibleGalaxy.role
     interfaces:
       Standard:
